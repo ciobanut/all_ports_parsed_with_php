@@ -2,12 +2,19 @@
 
 require('vendor/autoload.php');
 
-use DiDom\Document;
+$contries = require('contries.php');
 
-$document = new Document('https://www.searates.com/port/cape_town_za', true);
+// use DiDom\Document;
 
-$posts = $document->find('.incoterms-block__item');
+// $document = new Document('https://www.searates.com/maritime/', true);
 
-foreach($posts as $post) {
-    echo $post->text(), "<br>";
+// $posts = $document->find('.countries');
+
+// foreach($posts as $post) {
+//     echo $post->html(), "<br>";
+// }
+
+foreach($contries as $post) {
+    echo $post, "<br>";
 }
+
